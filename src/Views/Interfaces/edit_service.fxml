@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="editServiceAnchorPane" prefHeight="596.0" prefWidth="871.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.EditServiceController">
+   <children>
+      <BorderPane prefHeight="596.0" prefWidth="871.0">
+         <top>
+            <AnchorPane prefHeight="88.0" prefWidth="871.0" style="-fx-background-color: fff;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="340.0" layoutY="39.0" text="Modifier le service" textFill="#0598ff">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="#0598ff" glyphName="PLUS" layoutX="288.0" layoutY="66.0" size="25" />
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="labelServiceField" layoutX="276.0" layoutY="98.0" prefHeight="27.0" prefWidth="319.0" promptText="Label du service" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+                  <TextField fx:id="purchasePriceField" layoutX="277.0" layoutY="205.0" prefHeight="27.0" prefWidth="319.0" promptText="Prix d'achat" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+                  <Button layoutX="356.0" layoutY="424.0" mnemonicParsing="false" onAction="#editService" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: #0598ff;" text="Modifier" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="errorLabelServiceType" layoutX="627.0" layoutY="44.0" prefHeight="17.0" prefWidth="228.0" textFill="RED" />
+                  <Label fx:id="errorLabelServiceName" layoutX="619.0" layoutY="103.0" prefHeight="17.0" prefWidth="225.0" textFill="RED" />
+                  <Label fx:id="errorLabelProviderName" layoutX="627.0" layoutY="157.0" prefHeight="17.0" prefWidth="215.0" textFill="RED" />
+                  <Label fx:id="errorLabelSubscriptionDate" layoutX="632.0" layoutY="275.0" prefHeight="17.0" prefWidth="219.0" textFill="RED" />
+                  <Label fx:id="errorLabelRenewalDate" layoutX="627.0" layoutY="343.0" prefHeight="17.0" prefWidth="215.0" textFill="RED" />
+                  <Label fx:id="successLabel" layoutX="331.0" layoutY="389.0" prefHeight="17.0" prefWidth="276.0" textFill="#1eab2a" />
+                  <Button fx:id="buttonConsultServices" layoutX="22.0" layoutY="424.0" mnemonicParsing="false" onMouseClicked="#consultServices" prefHeight="38.0" prefWidth="221.0" style="-fx-background-color: #0598ff;" text="Consulter les services" textFill="WHITE" visible="false">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <ComboBox fx:id="serviceTypeComboBox" layoutX="276.0" layoutY="39.0" prefHeight="27.0" prefWidth="321.0" promptText="Séléctionner un type de service" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+                  <Label layoutX="153.0" layoutY="44.0" text="Type de service :" />
+                  <DatePicker fx:id="providerSubscriptionDatePicker" layoutX="277.0" layoutY="270.0" prefHeight="25.0" prefWidth="322.0" promptText="Date d'abonnement" style="-fx-background-color: transparent; -fx-border-color: #0598ff;" />
+                  <DatePicker fx:id="providerRenewalDatePicker" layoutX="277.0" layoutY="338.0" prefHeight="25.0" prefWidth="322.0" promptText="Date de renouvellement" style="-fx-background-color: transparent; -fx-border-color: #0598ff;" />
+                  <TextField fx:id="providerField" layoutX="277.0" layoutY="152.0" prefHeight="27.0" prefWidth="319.0" promptText="Fournisseur" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+                  <Label fx:id="errorLabelPurchasePrice" layoutX="628.0" layoutY="210.0" prefHeight="17.0" prefWidth="228.0" textFill="RED" />
+                  <Label layoutX="151.0" layoutY="103.0" text="Label du service :" />
+                  <Label layoutX="132.0" layoutY="157.0" text="Nom du forunisseur :" />
+                  <Label layoutX="132.0" layoutY="275.0" text="Date d'abonnement :" />
+                  <Label layoutX="177.0" layoutY="210.0" text="Prix d'achat :" />
+                  <Label layoutX="110.0" layoutY="343.0" text="Date de renouvellement :" />
+                  <TextField fx:id="idServiceField" layoutX="103.0" layoutY="2.0" prefHeight="25.0" prefWidth="0.0" style="-fx-background-color: transparent;" />
+               </children>
+            </AnchorPane>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>
